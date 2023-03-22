@@ -75,7 +75,7 @@ class Game {
 
   play() {
     this.handleElements();
-    this.handleResetButton();
+    this.handleResetButton(); //aparece o botao
     Player.getPlayersInfo();
 
     if (allPlayers !== undefined) {
@@ -115,7 +115,7 @@ class Game {
         player.positionY += 10;
         player.update();
       }
-      this.handlePlayerControls();
+      this.handlePlayerControls(); //adiciona todos os controles do jogador
 
       drawSprites();
     }
@@ -156,12 +156,10 @@ handlePlayerControls() {
     player.positionY += 10;
     player.update();
   }
-
   if (keyIsDown(LEFT_ARROW) && player.positionX > width / 3 - 50) {
     player.positionX -= 5;
     player.update();
   }
-
   if (keyIsDown(RIGHT_ARROW) && player.positionX < width / 2 + 300) {
     player.positionX += 5;
     player.update();
