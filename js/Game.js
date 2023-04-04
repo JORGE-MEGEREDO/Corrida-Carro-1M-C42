@@ -115,7 +115,8 @@ class Game {
         player.positionY += 10;
         player.update();
       }
-      this.handlePlayerControls(); //adiciona todos os controles do jogador
+      //adiciona todos os controles do jogador C42
+      this.handlePlayerControls(); 
 
       drawSprites();
     }
@@ -143,6 +144,7 @@ class Game {
 
 handleResetButton() {
   this.resetButton.mousePressed(() => {
+    //defina o valor inicial para os jogadores e gamecount C42
     database.ref("/").set({
       playerCount: 0,
       gameState: 0,
@@ -156,6 +158,7 @@ handlePlayerControls() {
     player.positionY += 10;
     player.update();
   }
+  //preencher com keydown para esquerda e direita C42
   if (keyIsDown(LEFT_ARROW) && player.positionX > width / 3 - 50) {
     player.positionX -= 5;
     player.update();
