@@ -157,15 +157,4 @@ handlePlayerControls() {
   if (keyIsDown(UP_ARROW)) {
     player.positionY += 10;
     player.update();
-  }
-  //preencher com keydown para esquerda e direita C42
-  if (keyIsDown(LEFT_ARROW) && player.positionX > width / 3 - 50) {
-    player.positionX -= 5;
-    player.update();
-  }
-  if (keyIsDown(RIGHT_ARROW) && player.positionX < width / 2 + 300) {
-    player.positionX += 5;
-    player.update();
-  }
-}
-}
+  
